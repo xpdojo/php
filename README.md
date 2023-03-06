@@ -25,11 +25,11 @@ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/loca
 ```
 
 ```sh
-All settings correct for using Composer
-Downloading...
+# All settings correct for using Composer
+# Downloading...
 
-Composer (version 2.5.4) successfully installed to: /usr/local/bin/composer
-Use it: php /usr/local/bin/composer
+# Composer (version 2.5.4) successfully installed to: /usr/local/bin/composer
+# Use it: php /usr/local/bin/composer
 ```
 
 ```sh
@@ -62,16 +62,16 @@ composer self-update
 
 PHP Framework for Web Artisans.
 
-composer global은 다음 경로에 설치하기 때문에 PATH를 설정해야 한다.
-
-```sh
-export PATH=$PATH:$HOME/.config/composer/vendor/bin
-```
-
 Laravel Installer를 설치한다.
 
 ```sh
 composer global require laravel/installer
+```
+
+composer global은 다음 경로에 설치하기 때문에 PATH를 설정해야 한다.
+
+```sh
+export PATH=$PATH:$HOME/.config/composer/vendor/bin
 ```
 
 ```sh
@@ -82,19 +82,16 @@ laravel --version
 Laravel 프로젝트를 생성한다.
 
 ```sh
-laravel new myproject
+laravel new demo-laravel
 ```
 
 ```sh
-cd myproject
+cd demo-laravel
 ```
 
 ```sh
 composer install
-```
-
-```sh
-# 에러 발생 시
+# 설치 시 에러가 발생할 경우
 composer install --ignore-platform-reqs
 ```
 
@@ -104,6 +101,8 @@ composer install --ignore-platform-reqs
 php artisan serve
 # Server running on [http://127.0.0.1:8000].
 ```
+
+![Laravel](images/laravel-landing.png)
 
 아티즌(Artisan)은 라라벨에 포함된 커맨드라인 인터페이스(CLI)의 이름입니다.
 Artisan은 `artisan` 스크립트 파일로 애플리케이션의 최상위 폴더에 존재하며
